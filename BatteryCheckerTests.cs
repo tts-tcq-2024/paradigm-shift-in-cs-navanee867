@@ -1,4 +1,3 @@
-using Xunit;
 using static paradigm_shift_csharp.BatteryCheckerHelper;
 
 namespace paradigm_shift_csharp
