@@ -2,12 +2,12 @@ namespace paradigm_shift_csharp
 {
     internal static class DisplayMessages
     {
-        private static readonly List<List<string>> messages =
-            [
-                ["OK.", "OK."],
-                ["WARNING: Parameter is in border range.", "WARNUNG: Parameter liegt im Grenzbereich."],
-                ["ERROR: Not in Range! Please check.", "FEHLER: Nicht in Reichweite! Überprüfen Sie bitte."]
-            ];
+        private static readonly List<List<string>> messages = new List<List<string>>
+{
+ new List<string> { "OK.", "OK." },
+ new List<string> { "WARNING: Parameter is in border range.", "WARNUNG: Parameter liegt im Grenzbereich." },
+ new List<string> { "ERROR: Not in Range! Please check.", "FEHLER: Nicht in Reichweite! Überprüfen Sie bitte." }
+};
 
         public static void PrintOkMessage(string valueType, LanguageOption languageOption)
         {
