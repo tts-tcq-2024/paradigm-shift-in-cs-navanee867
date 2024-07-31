@@ -6,7 +6,7 @@ namespace paradigm_shift_csharp
     {
         static int Main()
         {
-            BatteryCheckerTests.BatteryCheckerTests();
+            BatteryCheckerTests.BatteryCheckTests();
             return 0;
         }
     }
