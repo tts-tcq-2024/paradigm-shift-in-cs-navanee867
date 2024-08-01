@@ -26,7 +26,8 @@ namespace paradigm_shift_csharp
                 PrintOkMessage(parameterName, LanguageOption.English);
                 return true;
             }
-            else if (IsValueInToleranceRange(parameterValue, minValue, maxValue))
+            
+            if (IsValueInToleranceRange(parameterValue, minValue, maxValue))
             {
                 PrintWarnMessage(parameterName, LanguageOption.English);
                 return true;
