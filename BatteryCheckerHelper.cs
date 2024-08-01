@@ -21,13 +21,15 @@ namespace paradigm_shift_csharp
 
         private static bool CheckParameterOk(float parameterValue, float minValue, float maxValue, string parameterName)
         {
-           if (IsValueInRange(parameterValue, minValue, maxValue))
+            if (IsValueInRange(parameterValue, minValue, maxValue))
             {
                 PrintOkMessage(parameterName, LanguageOption.English);
-                if (IsValueInToleranceRange(parameterValue, minValue, maxValue))
-                {
-                    PrintWarnMessage(parameterName, LanguageOption.English);
-                }
+                return true;
+            }
+    
+            if (IsValueInToleranceRange(parameterValue, minValue, maxValue))
+            {
+                PrintWarnMessage(parameterName, LanguageOption.English);
                 return true;
             }
             else
@@ -41,7 +43,7 @@ namespace paradigm_shift_csharp
         {
             return value >= minValue && value <= maxValue;
         }
-
+        
         private static bool IsValueInToleranceRange(float value, float minValue, float maxValue)
         {
             float tolerance = (maxValue - minValue) * 0.05f;
