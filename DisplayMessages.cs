@@ -2,6 +2,7 @@ namespace paradigm_shift_csharp
 {
     internal static class DisplayMessages
     {
+        private static ILogger logger = new ConsoleLogger();
         private static readonly List<List<string>> messages = new List<List<string>>
 {
  new List<string> { "OK.", "OK." },
@@ -10,18 +11,18 @@ namespace paradigm_shift_csharp
 };
 
         public static void PrintOkMessage(string valueType, LanguageOption languageOption)
-        {
-            Console.WriteLine($"{valueType} {messages[0][(int)languageOption]}");
-        }
+{
+    logger.Info($"{valueType} {messages[0][(int)languageOption]}");
+}
 
-        public static void PrintWarnMessage(string valueType, LanguageOption languageOption)
-        {
-            Console.WriteLine($"{valueType} {messages[1][(int)languageOption]}");
-        }
+public static void PrintWarnMessage(string valueType, LanguageOption languageOption)
+{
+    logger.Info($"{valueType} {messages[1][(int)languageOption]}");
+}
 
-        public static void PrintErrorMessage(string valueType, LanguageOption languageOption)
-        {
-            Console.WriteLine($"{valueType} {messages[2][(int)languageOption]}");
-        }
+public static void PrintErrorMessage(string valueType, LanguageOption languageOption)
+{
+    logger.Info($"{valueType} {messages[2][(int)languageOption]}");
+}
     }
 }
